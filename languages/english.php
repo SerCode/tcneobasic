@@ -517,7 +517,7 @@ $LANG['config_userCustom4_comment'] = 'Enter the caption of this custom user fie
 $LANG['config_userCustom5'] = 'User Custom Field 5 Caption';
 $LANG['config_userCustom5_comment'] = 'Enter the caption of this custom user field. The caption will be shown in the profile dialog.';
 $LANG['config_userManual'] = 'User Manual';
-$LANG['config_userManual_comment'] = $appTitle . '\'s user manual is maintained in English and is available at <a href="https://georgelewe.atlassian.net/wiki/display/TCNEO/" target="_blank">Lewe.com\'s Confluence site</a>.
+$LANG['config_userManual_comment'] = $appTitle . '\'s user manual is maintained in English and is available at the <a href="https://support.lewe.com/docs/teamcal-neo-manual/" target="_blank">Lewe.com Support site</a>.
       If you have written your own manual, enter the link here. It will be displayed in the Help menu as long as the field is not empty.';
 $LANG['config_versionCompare'] = 'Version Compare';
 $LANG['config_versionCompare_comment'] = 'With this option enabled, TeamCal Neo\'s About page will compare the running version with the newest version available. In order to do so, 
