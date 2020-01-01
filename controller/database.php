@@ -173,33 +173,6 @@ if (!empty($_POST))
             $LOG->log("logDatabase",L_USER,"log_db_delete_groups");
          }
          
-         if ( isset($_POST['chk_delMessages']) )
-         {
-            //
-            // Delete Messages and all User-Message assignments
-            //
-            $result = $MSG->deleteAll();
-            $result = $UMSG->deleteAll();
-            
-            //
-            // Log this event
-           //
-            $LOG->log("logDatabase",L_USER,"log_db_delete_msg");
-         }
-          
-         if ( isset($_POST['chk_delOrphMessages']) )
-         {
-            //
-            // Delete orphaned announcements
-            //
-            deleteOrphanedMessages();
-             
-            //
-            // Log this event
-            //
-            $LOG->log("logMessages",L_USER,"log_db_delete_msg_orph");
-         }
-          
          if ( isset($_POST['chk_delPermissions']) )
          {
             $P->deleteAll();

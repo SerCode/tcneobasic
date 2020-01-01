@@ -184,12 +184,6 @@ if (!defined('VALID_ROOT')) exit('');
                                           <label><input name="chk_delGroups" value="chk_delGroups" tabindex="<?=$tabindex++?>" type="checkbox"><?=$LANG['db_del_groups']?></label>
                                        </div>
                                        <div class="checkbox">
-                                          <label><input name="chk_delMessages" value="chk_delMessages" tabindex="<?=$tabindex++?>" type="checkbox"><?=$LANG['db_del_messages']?></label>
-                                       </div>
-                                       <div class="checkbox">
-                                          <label><input name="chk_delOrphMessages" value="chk_delOrphMessages" tabindex="<?=$tabindex++?>" type="checkbox"><?=$LANG['db_del_orphMessages']?></label>
-                                       </div>
-                                       <div class="checkbox">
                                           <label><input name="chk_delPermissions" value="chk_delPermissions" tabindex="<?=$tabindex++?>" type="checkbox"><?=$LANG['db_del_permissions']?></label>
                                        </div>
                                        <div class="checkbox">
