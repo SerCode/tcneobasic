@@ -110,26 +110,25 @@ else
 // CLASS INSTANCES
 //
 
-// Instantiate primary classes (used by other classes)
+// Instantiate primary classes
 //
 $DB  = new DB($CONF['db_server'], $CONF['db_name'], $CONF['db_user'], $CONF['db_pass']);
 $C   = new Config();
+$L    = new Login();
+$MSG  = new Messages();
+$UL   = new Users(); // For the currently logged in user
+$UO   = new UserOption();
 
 //
 // Instantiate secondary classes
 //
-$AV   = new Avatar();
 $G    = new Groups();
-$L    = new Login();
 $LOG  = new Log();
-$MSG  = new Messages();
 $P    = new Permissions();
 $RO   = new Roles();
 $U    = new Users();
 $UG   = new UserGroup();
-$UL   = new Users(); // For the currently logged in user
 $UMSG = new UserMessage();
-$UO   = new UserOption();
 
 //
 // Custom classes
@@ -284,6 +283,8 @@ if (false)
 if (!strlen($language)) $language = 'english';
 require_once (WEBSITE_ROOT . '/languages/' . $language . '.php');     // Framework
 require_once (WEBSITE_ROOT . '/languages/' . $language . '.app.php'); // Application
+
+$AV   = new Avatar($LANG);
 
 //=============================================================================
 //

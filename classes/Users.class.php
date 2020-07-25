@@ -131,17 +131,23 @@ class Users
     */
    public function countUsers($countAdmin=false, $countHidden=false)
    {
-      if ($countHidden)
+      if ($countHidden) {
+
          $query = $this->db->prepare('SELECT COUNT(*) FROM ' . $this->table);
-         else
-            $query = $this->db->prepare('SELECT COUNT(*) FROM ' . $this->table . ' WHERE hidden = 0');
 
-            $result = $query->execute();
+      } else {
 
-            if ($countAdmin)
-               return $result->fetchColumn();
-               else
-                  return $result->fetchColumn()-1;
+         $query = $this->db->prepare('SELECT COUNT(*) FROM ' . $this->table . ' WHERE hidden = 0;');
+         $result = $query->execute();
+
+         if ($result) {
+
+            if ($countAdmin) return $result->fetchColumn();
+            else             return $result->fetchColumn()-1;
+
+         }
+
+      }
    }
     
    // ---------------------------------------------------------------------

@@ -1040,8 +1040,8 @@ function hex2rgb($color)
 function loginInfo()
 {
    global $L, $LANG, $RO, $UL;
-   
-   $loginInfo = $LANG['status_logged_out'];
+
+   $loginInfo = 'Not logged in';
    
    if ($luser = $L->checkLogin())
    {
@@ -1050,7 +1050,7 @@ function loginInfo()
        */
       $UL->findByName($luser);
       $loginInfo  = $UL->getFullname($luser) . " (" . $luser . ")<br>";
-      $loginInfo .= $LANG['role'] . ': '. $RO->getNameById($UL->role);
+      $loginInfo .= 'Role' . ': '. $RO->getNameById($UL->role);
    }
    
    return $loginInfo;
